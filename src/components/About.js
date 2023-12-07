@@ -1,40 +1,60 @@
-import React from 'react'
-import "../styles/About.css"
+import React from 'react';
+import '../styles/About.css';
 
 export default function About() {
   return (
-    <div className='about-cont'>
+    <div className="about-cont">
       <section id="about-flixio">
-        <h2><span className="beautify">About Flixio</span></h2>
-        <p>Flixio is not just another entertainment app; it's a gateway to a world of limitless entertainment options. Whether you're a movie buff, a TV series enthusiast, or a casual viewer, Flixio has something for everyone. Our user-friendly interface, vast library, and personalized recommendations make sure you're always one click away from your next favorite film or show.</p>
-        <p>Discover a treasure trove of cinematic experiences, ranging from the golden classics that defined eras, to the latest blockbusters that set trends. With Flixio, you'll embark on a journey through storytelling that knows no bounds.</p>       
+        <h2>
+          <span className="beautify">About Our Pet Adoption Platform</span>
+        </h2>
+        <p>
+          Welcome to our pet adoption platform! We're not just another website; we're your gateway to a world of adorable pets waiting for a loving home. Whether you're a seasoned pet owner, a first-time adopter, or just curious, our platform has something for everyone. Our user-friendly interface, extensive pet profiles, and personalized recommendations make sure you're always one click away from your next furry friend.
+        </p>
+        <p>
+          Explore a diverse array of pets, from the timeless classics like cats and dogs to unique critters that could be your perfect match. With our platform, you'll embark on a journey to find a companion that suits your lifestyle and preferences.
+        </p>
       </section>
 
       <section id="our-mission">
-        <h2><span className="beautify">Our Mission</span></h2>
-        <p>At Flixio, we're on a mission to revolutionize how you experience entertainment. We aim to provide a seamless and enjoyable platform for discovering, watching, and sharing your favorite content. Our dedicated team of movie enthusiasts and tech experts work tirelessly to bring you a service that not only meets but exceeds your expectations.</p>
-        <p>We believe that everyone deserves access to exceptional entertainment, regardless of their tastes or preferences. That's why Flixio is designed to cater to a diverse audience, ensuring there's something for everyone. Whether you're in the mood for heartwarming dramas, edge-of-your-seat thrillers, or side-splitting comedies, Flixio has it all.</p>
-        <p>Our commitment goes beyond just providing a platform. We're here to foster a community of passionate cinephiles. Share your thoughts, recommendations, and insights with fellow Flixio users. Together, we'll create an environment where the love for storytelling thrives.</p>
+        <h2>
+          <span className="beautify">Our Mission in Pet Adoption</span>
+        </h2>
+        <p>
+          At our pet adoption platform, we're on a mission to revolutionize how you bring joy into your life through pet companionship. We aim to provide a seamless and enjoyable experience for discovering, adopting, and sharing your life with a new furry family member. Our dedicated team of pet enthusiasts and tech experts work tirelessly to bring you a service that not only meets but exceeds your expectations.
+        </p>
+        <p>
+          We believe that every pet deserves a loving home, and every person deserves the joy that a pet can bring. That's why our platform is designed to connect pets with loving owners, ensuring a perfect match for a lifetime of happiness.
+        </p>
+        <p>
+          Our commitment goes beyond just providing a platform. We're here to foster a community of passionate pet lovers. Share your adoption stories, pet care tips, and joyful moments with fellow users. Together, we'll create an environment where the love for pets thrives.
+        </p>
       </section>
 
       <section id="key-features">
-        <h2><span className="beautify">Key Features</span></h2>
+        <h2>
+          <span className="beautify">Key Features of Our Pet Adoption Platform</span>
+        </h2>
         <ol>
           <li>
-            <h3>Extensive Library</h3>
-            <p>With a vast collection of movies and TV series spanning across genres, languages, and eras, Flixio ensures there's always something for everyone. From classic cinema to the latest blockbusters, we've got it all covered.</p>
+            <h3>Extensive Pet Profiles</h3>
+            <p>
+              With a vast collection of pet profiles ranging across breeds, sizes, and personalities, our platform ensures there's a perfect match for every pet lover. From playful pups to wise old cats, we've got it all covered.
+            </p>
           </li>
           <li>
             <h3>User-Friendly Interface</h3>
-            <p>Navigating Flixio is a breeze. Our intuitive design allows you to effortlessly search, filter, and discover new content. Finding your next binge-worthy series has never been this easy.</p>
+            <p>
+              Navigating our pet adoption platform is a breeze. Our intuitive design allows you to effortlessly search, filter, and discover new furry friends. Finding your next lifelong companion has never been this easy.
+            </p>
           </li>
         </ol>
       </section>
 
-
-      <p>For any inquiries, feedback, or support, feel free to contact us at <a href="mailto:support@flixio.com">support@flixio.com</a>. We're here to make sure your Flixio experience is nothing short of exceptional.</p>
-      <p>Thank you for choosing Flixio. Happy watching!</p>
-
+      <p>
+        For any inquiries, feedback, or support, feel free to contact us at <a href="mailto:support@petsphere.com">support@petadoptions.com</a>. We're here to make sure your pet adoption experience is nothing short of exceptional.
+      </p>
+      <p>Thank you for choosing our Pet Adoption Platform. Happy adopting!</p>
     </div>
-  )
+  );
 }

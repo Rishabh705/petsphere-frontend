@@ -9,7 +9,7 @@ export default function Contact() {
         <p>Have a question, comment, or suggestion? We'd love to hear from you!</p>
         <p>You can reach us through the following channels:</p>
         <ul>
-          <li>Email: <a href="mailto:info@flixio.com">info@flixio.com</a></li>
+          <li>Email: <a href="mailto:info@petsphere.com">info@petsphere.com</a></li>
           <li>Phone: 9965445699</li>
           <li>Address: 1234 Razor's Apartment, India</li>
         </ul>

@@ -8,8 +8,8 @@ export default function Home() {
     <div className="container1">
       <div className="background">
         <div className="container2">
-          <p>Welcome to <span className="beautify"><b>StaffSphere</b></span></p>
-          <p>"Welcome to Staffsphere – streamline employee management with sleek cards, quick search, and smart filters. Effortlessly create teams, explore details, and enjoy a seamless experience on any device. Simplify with Staffsphere!"</p>
+          <p>Welcome to <span className="beautify"><b>PetSphere</b></span></p>
+          <p>"Welcome to Petsphere – streamline pet store with sleek cards and smart filters. Effortlessly find pets, explore details and enjoy a seamless experience on any device. Simplify pet adoption with Petsphere!"</p>
         </div>
       </div>
     </div>

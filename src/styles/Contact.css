@@ -1,6 +1,6 @@
 .contact {
   min-height: 95vh;
-  color: aliceblue;
+  color: #36454F;
 }
 
 .contact h2 {
@@ -35,7 +35,6 @@
 form>div {
   display: flex;
   gap: 20px;
-  justify-content: space-between;
   padding-bottom: 1rem;
 }
 
@@ -45,7 +44,7 @@ textarea {
   color: aliceblue;
   padding: 5px;
   border-radius: 3px;
-  background-color: rgb(87, 87, 87);
+  background-color: rgb(190, 189, 189);
 }
 
 .contact button {
@@ -53,15 +52,15 @@ textarea {
   color: black;
   padding: 3px 10px;
   border-radius: 3px;
-  background-color: rgb(220, 166, 166);
-  border: 3px solid rgb(227, 35, 35);
+  background-color: rgb(220, 194, 166);
+  border: 3px solid rgb(215, 172, 107);
   transition-property: all;
   transition-duration: 0.1s;
   transition-timing-function: ease-out;
 }
 
 .contact button:hover {
-  background-color: rgb(227, 35, 35);
+  background-color: rgb(215, 172, 107);
   color: white;
 }
 
