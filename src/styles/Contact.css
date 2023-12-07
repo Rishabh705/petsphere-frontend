@@ -1,0 +1,86 @@
+.contact {
+  min-height: 95vh;
+  color: aliceblue;
+}
+
+.contact h2 {
+  font-size: 1.3rem;
+}
+
+.contact section>h2 {
+  padding-bottom: 0.7rem;
+}
+
+.contact section {
+  padding-bottom: 1rem;
+}
+
+.contact p {
+  font-size: 0.9rem;
+  padding-bottom: 0.5rem;
+}
+
+.contact ul {
+  padding-left: 1.3rem;
+}
+
+.contact li {
+  padding-bottom: 0.5rem;
+}
+
+.contact p:last-child {
+  padding-top: 0.5rem;
+}
+
+form>div {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.contact input,
+textarea {
+  border: none;
+  color: aliceblue;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgb(87, 87, 87);
+}
+
+.contact button {
+  border: none;
+  color: black;
+  padding: 3px 10px;
+  border-radius: 3px;
+  background-color: rgb(220, 166, 166);
+  border: 3px solid rgb(227, 35, 35);
+  transition-property: all;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+}
+
+.contact button:hover {
+  background-color: rgb(227, 35, 35);
+  color: white;
+}
+
+@media screen and (max-width:575px) {
+  .contact {
+    padding: 6rem 32px 1rem 32px;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .contact {
+    padding: 6rem 64px 1rem 64px;
+  }
+}
+
+@media screen and (min-width:768px) {}
+
+@media screen and (min-width:992px) {
+  .contact {
+    padding: 6rem 120px 1rem 120px;
+  }
+}

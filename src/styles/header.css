@@ -1,0 +1,136 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    position: absolute;
+    padding: 0px 120px;
+    height: 5rem;
+    width: 100%;
+    overflow-x: clip;
+}
+
+.heading-cont {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 1.3rem;
+}
+
+h1 {
+    font-family: 'Wallpoet', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #36454F;
+}
+
+a {
+    color: #36454F;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    display: none;
+    align-items: center;
+    position: relative;
+    height: 40px;
+}
+
+.navlist-1 {
+    display: flex;
+    font-size: 1.2rem;
+    height: 100%;
+    list-style-type: none;
+    font-family: 'Inter', 'Times New Roman', Times, serif;
+    z-index: 2;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(238, 120, 102);
+    overflow: hidden;
+    width: 0;
+    height: 5px;
+    transition: .5s ease;
+}
+
+.navlist-1 li:hover .overlay {
+    width: 100%;
+}
+
+.navlist-1 li {
+    position: relative;
+    color: #36454F;
+    width: 100px;
+}
+
+.navlist-1 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* show navlist */
+.navbar-nav-show{
+    position: absolute;
+    right: 0;
+    display: flex;
+}
+.navlist-1-show{
+    flex-flow: column;
+    gap: 20px;
+    margin-top: 11rem;
+    margin-right: 2.5rem;
+}
+.navlist-1 a:hover{
+    color: #363d41;
+    font-weight: 800;
+}
+.activate{
+    font-weight: 800;
+    color: #36454F;
+    text-decoration: underline;
+}
+@media screen and (max-width:575px) {
+    .navbar{
+        padding: 0px 32px;
+    }
+    .heading-cont{
+        font-size: 1.2rem;
+    }
+    .overlay{
+        display: none;
+    }
+    .navlist-1-show{
+        margin-right: 1.5rem;
+    }
+
+}
+@media screen and (min-width:576px) {
+    .navbar{
+        padding: 0px 64px;
+    }
+    .overlay{
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:992px) {
+    .navbar{
+        padding: 0px 120px;
+    }
+    .navbar-nav{
+        display: flex;
+    }
+    .overlay{
+        display: block;
+    }
+    .activate {
+        color:#36454F;;
+        text-decoration: none;
+        font-weight: 100;
+        border-bottom: 5px solid #dd3b50;
+    }
+}

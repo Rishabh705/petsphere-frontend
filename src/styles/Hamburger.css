@@ -1,0 +1,78 @@
+#menu-icon {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    z-index: 2;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.bar {
+    height: 5px;
+    width: 100%;
+    background-color: #DC052D;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+#bar1 {
+    transform: translateY(-4px);
+}
+
+#bar3 {
+    transform: translateY(4px);
+}
+
+
+.menu-bg {
+    top: 0px;
+    right: 70px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 30px 0 20px 20px;
+    background: radial-gradient(circle, #DC052D, #DC052D);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+
+.change .bar {
+    background-color: white;
+}
+
+.change #bar1 {
+    transform: translateY(4px) rotateZ(-225deg);
+}
+
+.change #bar2 {
+    opacity: 0;
+}
+
+.change #bar3 {
+    transform: translateY(-6px) rotateZ(225deg);
+}
+
+.change-bg {
+    width: 340px;
+    height: 300px;
+    transform: translate(57%, -34%);
+}
+
+@media screen and (max-width:575px) {
+    .change-bg{
+        width: 300px;
+        height: 280px;       
+    }
+    .menu-bg{
+        right: 60px;
+    }
+}
+@media screen and (min-width:992px) {
+    #menu-icon {
+        display: none;
+    }
+}

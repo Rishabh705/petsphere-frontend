@@ -1,0 +1,111 @@
+.card-list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.card2 {
+    display: flex;
+    border-radius: 20px 0 20px 0;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 230px;
+    min-height: 335px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 0 10px rgb(53 53 53 / 50%);
+}
+
+.card-image img{
+    width: 100%;
+    border-radius: 20px 0 0 0;
+}
+.card-image {
+    border-radius:20px 0 0 0 ;
+    width: 100%;
+}
+.card-text{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    gap: 20px;
+    width: 100%;
+    color: #2C3539;
+}
+
+.head{
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.head h3, .head h4{
+    text-align: center;
+}
+
+.no-results{
+    color: #2C3539;
+    text-align: center;
+}
+@media screen and (max-width:575px){
+
+    .card-text{
+        gap: 5px;
+        overflow: hidden;
+    }
+    .head h4{
+        font-size: 0.8rem;
+    }
+    .head h5{
+        font-size: 0.7rem;
+    }
+    .bio p{
+        font-size: 0.7rem;
+    }
+    .rating{
+        display: none;
+    }
+}
+@media screen and (min-width:576px){
+    .card-text{
+        gap: 5px;
+        overflow: hidden;
+    }
+    .head h4{
+        font-size: 0.8rem;
+    }
+    .head h5{
+        font-size: 0.7rem;
+    }
+    .bio p{
+        font-size: 0.7rem;
+    }
+    .rating{
+        display: none;
+    }
+}
+@media screen and (min-width:768px){
+    .card-text{
+        gap: 10px;
+    }
+    .head h4{
+        font-size: 0.9rem;
+    }
+    .head h5{
+        font-size: 0.8rem;
+    }
+    .bio p{
+        font-size: 0.7rem;
+    }
+    .rating{
+        display: block;
+    }
+}
+@media screen and (min-width:992px) {
+    .card-text{
+        gap: 15px;
+    }
+}

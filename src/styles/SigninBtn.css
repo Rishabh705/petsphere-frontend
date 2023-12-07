@@ -1,0 +1,93 @@
+.loginbtn {
+  border: transparent;
+  border-radius: 2rem;
+  color:aliceblue;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', 'Times New Roman', Times, serif;
+  background-color: transparent;
+}
+
+
+/*profile icon*/
+.user-profile {
+  margin-right: 1rem;
+}
+
+.profile-btn button {
+  border: transparent;
+  margin-top: 1px;
+  height: 52px;
+}
+
+.profile_icon {
+  height: 52px;
+}
+
+.profile_icon img {
+  border-radius: 2rem;
+  margin-top: 0.5px;
+}
+
+.navlist {
+  position: absolute;
+  right: 1rem;
+  top: 5rem;
+  background-color: #f45353;
+  display: block;
+  width: 17rem;
+  transform-origin: top center;
+  border-radius: 1rem;
+}
+
+.navlist .profile_icon {
+  background-color: #f45353;
+}
+
+.navlist_user_info {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+
+.navlist_user_info span img {
+  border-radius: 2rem;
+}
+
+.user_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.user_info p,
+.navlist-links button p {
+  font-size: 1rem;
+  color: black;
+}
+
+.navlist-links a{
+  border-radius: 0;
+}
+.navlist-links button:last-child{
+  border-radius: 0 0 1rem 1rem;
+}
+.navlist-links button {
+  border: none;
+  width: 100%;
+  height: 2.5rem;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+.navlist-links a:hover,.navlist-links button:hover {
+  background-color: #d4d5d7;
+}
+
+.navlist-links button svg {
+  position: absolute;
+  left: 4.5rem;
+  top: 8px;
+}
