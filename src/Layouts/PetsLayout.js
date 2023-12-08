@@ -57,9 +57,6 @@ export default function PetsLayout() {
       };
     }, []);
   
-
-  const url = process.env.CLIENT || 'http://localhost:3000';
-
   const speciesTypes = ['Dog', 'Cat']; // Add filter types
 
   const breedTypes = breeds

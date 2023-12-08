@@ -31,8 +31,8 @@ export default function Results({ results, loading, error }) {
       </div>
       <div className="card-text">
         <div className="head">
-          <h3>{item.name} ⚉ {item.age}</h3>
-          <h4>{item.breeds.primary}</h4>
+          <h3>{item.name}</h3>
+          <h4>{item.breeds.primary}  •  {item.age}</h4>
         </div>
       </div>
     </div>

@@ -59,7 +59,7 @@
 .change-bg {
     width: 340px;
     height: 300px;
-    transform: translate(57%, -34%);
+    transform: translate(50%, -20%);
 }
 
 @media screen and (max-width:575px) {

@@ -5,9 +5,10 @@ main {
     padding: 64px 120px;
 }
 
-.beautify{
+.beautify {
     color: #dd3b50;
 }
+
 .container1 {
     min-height: 100vh;
 }
@@ -19,26 +20,20 @@ main {
     text-align: center;
     flex-flow: column;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.26);
     justify-content: center;
     align-items: center;
 }
 
 .background {
     height: 100vh;
-    background-image: url('../img/5527154.jpg');
+    background-image: url('../img/splsh.png');
     background-repeat: no-repeat;
     background-size: cover;
-    opacity:0.5
-}
-
-.container2 p {
-    color: white;
 }
 
 .container2 p:nth-child(1) {
     font-size: 1.8rem;
-    font-family: 'Krona One','Courier New', Courier, monospace;
+    font-family: 'Krona One', 'Courier New', Courier, monospace;
 }
 
 .container3 h2 {
@@ -101,9 +96,11 @@ main {
     cursor: pointer;
     border-bottom: 2px solid #dd3b50;
 }
-.slider-activate{
+
+.slider-activate {
     border-bottom: 2px solid #dd3b50;
 }
+
 .card {
     display: flex;
     height: 290px;
@@ -121,77 +118,90 @@ main {
 }
 
 
-@media screen and (max-width:575px){
-    .container2{
+@media screen and (max-width:575px) {
+    .container2 {
         padding: 0 32px 64px 32px;
         gap: 32px;
-        justify-content: flex-end;
+        justify-content: center;
     }
+
     .container2 p:nth-child(1) {
         font-size: 1.4rem;
     }
-    
+
     .container2 p:nth-child(3) {
         font-size: 0.85rem;
-    }   
-    main{
+    }
+
+    main {
         padding: 64px 32px;
-    } 
-    .cont5 h2{
+    }
+
+    .cont5 h2 {
         font-size: 1.3rem;
     }
 }
-@media screen and (min-width:576px){
-    .container2{
+
+@media screen and (min-width:576px) {
+    .container2 {
         padding: 0 64px;
         gap: 48px;
         justify-content: center;
     }
+
     .container2 p:nth-child(1) {
         font-size: 1.4rem;
     }
-    
+
     .container2 p:nth-child(3) {
         font-size: 0.85rem;
-    } 
-    main{
+    }
+
+    main {
         padding: 64px 64px;
-    } 
-    .cont5 h2{
+    }
+
+    .cont5 h2 {
         font-size: 1.3rem;
     }
 }
-@media screen and (min-width:768px){
-    .container2{
+
+@media screen and (min-width:768px) {
+    .container2 {
         padding: 0 64px;
         gap: 48px;
         justify-content: center;
     }
+
     .container2 p:nth-child(1) {
         font-size: 1.4rem;
     }
-    
+
     .container2 p:nth-child(3) {
         font-size: 0.9rem;
-    }    
+    }
 }
-@media screen and (min-width:992px){
-    .container2{
+
+@media screen and (min-width:992px) {
+    .container2 {
         padding: 0 120px;
         gap: 48px;
         justify-content: center;
     }
+
     .container2 p:nth-child(1) {
         font-size: 1.8rem;
     }
-    
+
     .container2 p:nth-child(3) {
         font-size: 0.95rem;
-    } 
-    main{
+    }
+
+    main {
         padding: 64px 120px;
-    } 
-    .cont5 h2{
+    }
+
+    .cont5 h2 {
         font-size: 1.3rem;
     }
 }

@@ -27,6 +27,14 @@ export default function Detail() {
     loadPopular();
   }, [params.id, location.pathname]);
 
+  const photos = results?.photos?.map(pic => {
+    return (
+      pic?.large ? <img src={pic.large} alt="large" key={pic.large} />
+        : pic?.medium ? <img src={pic.medium} alt="medium" key={pic.medium} />
+          : <p>No image available</p>
+    )
+  }) || []
+
   return (
     <div className="detail-container">
       {loading && <p>Loading...</p>}
@@ -54,6 +62,7 @@ export default function Detail() {
           <div className="details">
             <div className="desc">
               <h2>Description</h2>
+              <hr />
               <p>{results?.description || "No description available"}</p>
               <ul className="attributes">
                 <h4>Attributes : </h4>
@@ -64,12 +73,20 @@ export default function Detail() {
                 <li>{`Current shots: ${results.attributes?.shots_current || 'Status Unknown'}`}</li>
               </ul>
             </div>
+            <div className="pics">
+              <h2>Photos</h2>
+              <hr />
+              <div className="photos">
+                {photos}
+              </div>
+            </div>
             <div className="contact-details">
               <h2>Contact Information</h2>
-              <h4>{`Email: ${results.contact?.email || 'Unknown'}`}</h4>
-              <h4>{`Phone: ${results.contact?.phone || 'Unknown'}`}</h4>
+              <hr />
+              <p>{`Email: ${results.contact?.email || 'Unknown'}`}</p>
+              <p>{`Phone: ${results.contact?.phone || 'Unknown'}`}</p>
               <ul className="attributes">
-                <h4>Address:</h4>
+                <p>Address:</p>
                 <li>{`City: ${results.contact?.address?.city || 'Unknown'}`}</li>
                 <li>{`State: ${results.contact?.address?.state || 'Unknown'}`}</li>
                 <li>{`Postal Code: ${results.contact?.address?.postcode || 'Unknown'}`}</li>

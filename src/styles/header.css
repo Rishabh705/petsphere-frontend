@@ -20,6 +20,7 @@
 h1 {
     font-family: 'Wallpoet', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #36454F;
+    z-index: 1;
 }
 
 a {

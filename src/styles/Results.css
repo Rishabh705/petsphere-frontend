@@ -7,24 +7,26 @@
 
 .card2 {
     display: flex;
-    border-radius: 20px 0 20px 0;
+    border-radius: 10px;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
     width: 230px;
-    min-height: 335px;
+    height: 335px;
     cursor: pointer;
     position: relative;
+    font-family: 'Mulish';
     box-shadow: 0 0 10px rgb(53 53 53 / 50%);
 }
 
 .card-image img{
     width: 100%;
-    border-radius: 20px 0 0 0;
+    border-radius: 10px;
+    height: 100%;
 }
 .card-image {
-    border-radius:20px 0 0 0 ;
+    border-radius:10px;
     width: 100%;
+    height: 70%;
 }
 .card-text{
     display: flex;
@@ -32,9 +34,15 @@
     flex-flow: column;
     gap: 20px;
     width: 100%;
+    flex:1;
     color: #2C3539;
 }
-
+.head h4{
+    font-size: 0.8rem;
+}
+.head h3{
+    font-size: 1rem;
+}
 .head{
     display: flex;
     flex-flow: column;
@@ -56,12 +64,6 @@
         gap: 5px;
         overflow: hidden;
     }
-    .head h4{
-        font-size: 0.8rem;
-    }
-    .head h5{
-        font-size: 0.7rem;
-    }
     .bio p{
         font-size: 0.7rem;
     }
@@ -74,12 +76,6 @@
         gap: 5px;
         overflow: hidden;
     }
-    .head h4{
-        font-size: 0.8rem;
-    }
-    .head h5{
-        font-size: 0.7rem;
-    }
     .bio p{
         font-size: 0.7rem;
     }
@@ -90,12 +86,6 @@
 @media screen and (min-width:768px){
     .card-text{
         gap: 10px;
-    }
-    .head h4{
-        font-size: 0.9rem;
-    }
-    .head h5{
-        font-size: 0.8rem;
     }
     .bio p{
         font-size: 0.7rem;

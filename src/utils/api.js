@@ -3,6 +3,7 @@ const url = process.env.SERVER || 'http://localhost:3500'
 // fetch all pets
 
 export async function getPets(page,filterType) {
+    console.log(process.env.REACT_APP_SERVER);
     const res = await fetch(`${url}/api/pet?page=${page}&type=${filterType.type}&age=${filterType.age}&breed=${filterType.breed}&gender=${filterType.gender}`)
     if (!res.ok) {
         throw {

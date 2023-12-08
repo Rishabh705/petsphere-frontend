@@ -13,6 +13,7 @@
 .intro>img {
     max-width: 30%;
     height: auto;
+    border-radius: 10px;
 }
 
 .intro {
@@ -47,14 +48,16 @@
     display: flex;
     flex-flow: column;
     gap: 5rem;
-    padding: 3rem 7rem;
+    padding: 0rem 7rem;
     justify-content: space-between;
 }
 
 .desc h2,
 .contact-details h2 {
     font-size: 1.7rem;
-    padding-bottom: 0.5rem;
+}
+.details:nth-child(n) hr{
+    margin-bottom: 1rem;
 }
 .attributes {
     display: flex;
@@ -70,23 +73,146 @@
 .attributes li{
     font-size: 1.3rem;
 }
+.photos{
+    display: flex;
+    flex-direction: row wrap;
+    gap: 10px;
+}
 
 @media screen and (max-width: 575px) {
     .detail-container {
         padding: 6rem 32px 1rem 32px;
     }
+    .details{
+        padding: 0rem 0;
+    }
+    .intro{
+        padding: 1rem;
+        gap: 30px;
+        align-items: center;
+        flex-flow: column;
+    }
+    .intro2{
+        padding-bottom: 1.5rem;
+    }
+    .intro>img{
+        max-width: 100%;
+    }
+    .intro h2{
+        text-align: center;
+        font-size: 1rem;
+    }
+    h3,h4,.desc p, .attributes li, .contact-details p{
+        font-size: 0.9rem;
+    }
+    .desc h2, .contact-details h2{
+        font-size: 1.2rem;
+    }
+    .photos{
+        flex-direction: column;
+    }
+    .photos img{
+        max-width: 60%;
+        height: auto;
+    }
+    
 }
 
 @media screen and (min-width: 576px) {
     .detail-container {
         padding: 6rem 64px 1rem 64px;
     }
+    .details{
+        padding: 0rem 4rem;
+    }
+    .intro{
+        padding: 1rem;
+        gap: 30px;
+        align-items: center;
+        flex-flow: column;
+    }
+    .intro2{
+        padding-bottom: 1.5rem;
+    }
+    .intro>img{
+        max-width: 70%;
+    }
+    .intro h2{
+        text-align: center;
+        font-size: 1rem;
+    }
+    h3,h4,.desc p, .attributes li, .contact-details p{
+        font-size: 0.9rem;
+    }
+    .desc h2, .contact-details h2{
+        font-size: 1.2rem;
+    }
+
+    .photos img{
+        max-width: 40%;
+        height: auto;
+    }
+
 }
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    .details{
+        padding: 0rem 4rem;
+    }
+    .intro{
+        padding: 1rem;
+        gap: 30px;
+        align-items: center;
+        flex-flow: column;
+    }
+    .intro2{
+        padding-bottom: 1.5rem;
+    }
+    .intro>img{
+        max-width: 50%;
+    }
+    .intro h2{
+        text-align: center;
+        font-size: 1rem;
+    }
+    h3,h4,.desc p, .attributes li, .contact-details p{
+        font-size: 0.9rem;
+    }
+    .desc h2, .contact-details h2{
+        font-size: 1.2rem;
+    }
+    .photos img{
+        max-width: 30%;
+        height: auto;
+    }
+}
 
 @media screen and (min-width: 992px) {
     .detail-container {
         padding: 10rem 120px 1rem 120px;
+    }
+    .details{
+        padding: 0rem 6rem;
+    }
+    .intro{
+        padding: 2rem;
+        gap: 10px;
+        align-items: center;
+        flex-flow: row;
+    }
+    .intro2{
+        padding-bottom: 1.5rem;
+    }
+    .intro>img{
+        max-width: 30%;
+    }
+    .intro h2{
+        font-size: 2.2rem;
+    }
+    h3,h4,.desc p, .attributes li, .contact-details p{
+        font-size: 1.2rem;
+    }
+    .desc h2, .contact-details h2{
+        font-size: 1.4rem;
     }
 }
