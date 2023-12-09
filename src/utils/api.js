@@ -1,4 +1,4 @@
-const url = process.env.SERVER || 'http://localhost:3500'
+const url = process.env.REACT_APP_SERVER
 
 // fetch all pets
 export async function getPets(page, filterType) {
