@@ -2,7 +2,7 @@ import React from 'react'
 import { BiLeftArrow,BiRightArrow } from 'react-icons/bi'
 export default function PageCount({page,setPage, count}) {
     const increment = () => {
-        if(count>20) //so that page deosn't change when there are less than 20 results
+        if(count>=20) //so that page deosn't change when there are less than 20 results
             setPage(prev => prev + 1)
     }
     const decrement = () => {

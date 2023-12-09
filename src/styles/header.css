@@ -61,6 +61,7 @@ a {
 .navlist-1 li {
     position: relative;
     color: #36454F;
+    text-align: center;
     width: 100px;
 }
 
@@ -81,8 +82,12 @@ a {
 .navlist-1-show{
     flex-flow: column;
     gap: 20px;
+    z-index: 15;
     margin-top: 11rem;
     margin-right: 2.5rem;
+}
+.navlist-1-show a{
+    color: aliceblue;
 }
 .navlist-1 a:hover{
     color: #363d41;

@@ -8,11 +8,11 @@ export default function Results({ results, loading, error }) {
   const navigate = useNavigate();
 
   if (loading) {
-    return <div>Loading...</div>; // You can replace this with a loading spinner or any loading indicator
+    return <div>Loading...</div>; 
   }
 
   if (error) {
-    return <div>Error fetching results. Please try again later.</div>; // Handle the error case
+    return <div>Error fetching results. Please try again later.</div>; 
   }
 
 

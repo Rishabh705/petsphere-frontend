@@ -19,7 +19,6 @@ export default function SigninBtn() {
             const user_info = document.querySelector(".navlist_user_info");
             const btn = document.querySelector(".profile-btn");
         
-            // Check if the elements exist before calling contains
             if (display && user_info && btn && !user_info.contains(event.target) && !btn.contains(event.target)) {
                 setDisplay(false);
             }
