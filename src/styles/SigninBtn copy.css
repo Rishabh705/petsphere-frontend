@@ -1,20 +1,15 @@
 .loginbtn {
   border: transparent;
   border-radius: 2rem;
-  color:rgb(0, 0, 0);
   font-size: 1.2rem;
   width: 100%;
   height: 100%;
   font-family: 'Inter', 'Times New Roman', Times, serif;
-  border: 2px solid #f45353;
-  transition-property: all;
-  transition-duration: 0.2s;
+  background-color: transparent;
 }
 
 .loginbtn:hover{
-  cursor: pointer;
-  background-color: #f45353;
-  color: #d4d5d7;
+  background-color: #6ed4e9;
 }
 /*profile icon*/
 .user-profile {
@@ -40,7 +35,8 @@
   position: absolute;
   right: 1rem;
   top: 5rem;
-  background-color: #f45353;
+  background-color: #3b5aa7;
+  box-shadow: rgb(32, 31, 31) 0px 2px 6px 0px;
   display: block;
   width: 17rem;
   transform-origin: top center;
@@ -48,7 +44,7 @@
 }
 
 .navlist .profile_icon {
-  background-color: #f45353;
+  background-color: #3b5aa7;
 }
 
 .navlist_user_info {
@@ -70,7 +66,6 @@
 .user_info p,
 .navlist-links button p {
   font-size: 1rem;
-  color: black;
 }
 
 .navlist-links a{
@@ -88,7 +83,7 @@
   position: relative;
 }
 
-.navlist-links a:hover,.navlist-links button:hover {
+.navlist-links a:hover,button:hover {
   background-color: #d4d5d7;
 }
 

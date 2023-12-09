@@ -5,7 +5,10 @@ import PetsLayout from './Layouts/PetsLayout'
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Pet from "./components/Pet";
+import Login from "./components/Login";
+import Register from "./components/Register";
 import Detail from "./components/Detail";
+import AuthRequires from "./components/AuthRequires"
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from "react-router-dom";
 
 function App() {
@@ -15,10 +18,14 @@ function App() {
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
+      <Route path="login" element={<Login />} />
+      <Route path="register" element={<Register />} />
       <Route path="pets" element={<PetsLayout />}>
         <Route index element={<Pet />} />                 {/* All pets list*/}
       </Route>
-      <Route path='/pets/:id' element={<Detail />} />                 {/* All pets list*/}
+      <Route element={<AuthRequires />}>
+        <Route path="pets/:id" element={<Detail />} />
+      </Route>      
       <Route path="*" element={<Error />} />
     </Route>
   )

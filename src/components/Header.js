@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/header.css'
 import { NavLink, Link } from 'react-router-dom'
 import Hamburger from './Hamburger'
+import SigninBtn from './SigninBtn'
 export default function Header() {
   return (
     <>
@@ -24,6 +25,9 @@ export default function Header() {
             <li>
               <div className="overlay"></div>
               <NavLink to="/contact" end="true" className={({ isActive }) => isActive ? 'activate' : null}><span>Contact</span></NavLink>
+            </li>
+            <li>
+              <SigninBtn/>
             </li>
           </ul>
         </nav>
