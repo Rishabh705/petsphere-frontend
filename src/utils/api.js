@@ -1,4 +1,4 @@
-const url ='https://petsphere-backend.onrender.com/'
+const url ='https://petsphere-backend.onrender.com'
 
 // fetch all pets
 export async function getPets(page, filterType) {
