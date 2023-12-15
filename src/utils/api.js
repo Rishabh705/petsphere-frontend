@@ -1,87 +1,91 @@
-const url ='https://petsphere-backend.onrender.com'
+const url = process.env.REACT_APP_SERVER;
 
-// fetch all pets
-export async function getPets(page, filterType) {
-    const res = await fetch(`${url}/api/pet?page=${page}&type=${filterType.type}&age=${filterType.age}&breed=${filterType.breed}&gender=${filterType.gender}`)
-    if (!res.ok) {
-        throw {
-            message: "Failed to fetch results",
-            statusText: res.statusText,
-            status: res.status
+const handleFetch = async (url, options) => {
+    try {
+        const res = await fetch(url, options);
+        const data =  await res.json();
+
+        if (!res.ok) {
+            throw {
+                message: data.message,
+                statusText: res.statusText,
+                status: res.status,
+            };
         }
+        return data
+    } catch (error) {
+        throw error;
     }
-    const data = await res.json()
-    return data
-}
+};
 
-// fetch a pet
-export async function getPet(id) {
-    const res = await fetch(`${url}/api/pet/${id}`)
-    if (!res.ok) {
-        throw {
-            message: "Failed to fetch results",
-            statusText: res.statusText,
-            status: res.status
-        }
-    }
-    const data = await res.json()
-    return data
-}
+// Fetch all pets
+export const getPets = async (page, filterType) => {
+    const endpoint = `${url}/api/pet?page=${page}&type=${filterType.type}&age=${filterType.age}&breed=${filterType.breed}&gender=${filterType.gender}`;
+    return handleFetch(endpoint);
+};
 
-// get breeds
-export async function getBreeds(type) {
-    const res = await fetch(`${url}/api/pet/breeds?type=${type}`)
-    if (!res.ok) {
-        throw {
-            message: "Failed to fetch results",
-            statusText: res.statusText,
-            status: res.status
-        }
-    }
-    const data = await res.json()
-    return data
-}
+// Fetch a pet
+export const getPet = async (id) => {
+    const endpoint = `${url}/api/pet/${id}`;
+    return handleFetch(endpoint);
+};
 
-export async function loginUser(creds) {
-    const res = await fetch(`${url}/api/auth/login`, {
-        method: "post",
+// Get breeds
+export const getBreeds = async (type) => {
+    const endpoint = `${url}/api/pet/breeds?type=${type}`;
+    return handleFetch(endpoint);
+};
+
+// Get favorite pets
+export const getFavorites = async (user) => {
+    const endpoint = `${url}/api/favorites?user=${user}`;
+    return handleFetch(endpoint);
+};
+
+// Add favorite pet
+export const addFavoritePet = async (user, pet) => {
+    const endpoint = `${url}/api/favorites`;
+
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            user: user,
+            pet: pet,
+        }),
+    };
+
+    return handleFetch(endpoint, options);
+};
+
+// Login user
+export const loginUser = async (creds) => {
+    const endpoint = `${url}/api/auth/login`;
+
+    const options = {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(creds),
-    })
+    };
 
-    const data = await res.json()
+    return handleFetch(endpoint, options);
+};
 
-    if (!res.ok) {
-        throw {
-            message: data.message,
-            statusText: res.statusText,
-            status: res.status
-        }
-    }
+// Register user
+export const registerUser = async (creds) => {
+    const endpoint = `${url}/api/auth/register`;
 
-    return data
-}
-export async function registerUser(creds) {
-    const res = await fetch(`${url}/api/auth/register`, {
-        method: "post",
+    const options = {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(creds),
-    })
+    };
 
-    const data = await res.json()
-
-    if (!res.ok) {
-        throw {
-            message: data.message,
-            statusText: res.statusText,
-            status: res.status
-        }
-    }
-
-    return data
-}
-
+    return handleFetch(endpoint, options);
+};

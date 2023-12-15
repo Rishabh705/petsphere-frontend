@@ -39,7 +39,7 @@ export default function Register() {
 
   return (
     <div className="login-container">
-      <h1>Register your account</h1>
+      <h2>Register your account</h2>
       {error && <h3 className="red">{error.message}</h3>}
 
       <form onSubmit={handleSubmit} className="login-form">

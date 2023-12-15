@@ -34,7 +34,7 @@ export default function Login() {
 
     return (
         <div className="login-container">
-            <h1>Sign in to your account</h1>
+            <h2>Sign in to your account</h2>
             {error && <h3 className="red">{error.message}</h3>}
 
             <form onSubmit={handleSubmit} className="login-form">
