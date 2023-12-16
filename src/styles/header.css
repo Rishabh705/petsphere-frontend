@@ -83,16 +83,23 @@ a {
     flex-flow: column;
     gap: 20px;
     z-index: 15;
-    margin-top: 11rem;
+    margin-top: 9rem;
     margin-right: 2.5rem;
+    opacity: 0;
+    animation: fadeIn 0.2s ease-in-out 0s forwards;
 }
 .navlist-1-show a{
-    color: aliceblue;
+    color: #e5e5e5;
 }
-.navlist-1 a:hover{
-    color: #363d41;
-    font-weight: 800;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+
 .activate{
     font-weight: 800;
     color: #36454F;

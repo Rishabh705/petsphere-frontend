@@ -83,7 +83,6 @@ export const loginUser = async (creds) => {
         },
         body: JSON.stringify(creds),
     };
-
     return handleFetch(endpoint, options);
 };
 
