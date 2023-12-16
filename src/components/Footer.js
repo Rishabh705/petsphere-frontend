@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Footer.css'
 import github from '../img/github.png'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (

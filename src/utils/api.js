@@ -3,16 +3,22 @@ const url = process.env.REACT_APP_SERVER;
 const handleFetch = async (url, options) => {
     try {
         const res = await fetch(url, options);
-        const data =  await res.json();
+
+        if (res.status === 204) {
+            return {}; // Return an empty object for 204 response
+        }
+
+        const data = await res.json();
 
         if (!res.ok) {
             throw {
-                message: data.message,
+                message: data.message || "Failed to fetch results",
                 statusText: res.statusText,
                 status: res.status,
             };
         }
-        return data
+
+        return data;
     } catch (error) {
         throw error;
     }
@@ -20,26 +26,32 @@ const handleFetch = async (url, options) => {
 
 // Fetch all pets
 export const getPets = async (page, filterType) => {
-    const endpoint = `${url}/api/pet?page=${page}&type=${filterType.type}&age=${filterType.age}&breed=${filterType.breed}&gender=${filterType.gender}`;
-    return handleFetch(endpoint);
+    const queryString = Object.keys(filterType).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(filterType[key])}`).join('&');
+    const endpoint = `${url}/api/pet?page=${page}&${queryString}`;
+    const data = await handleFetch(endpoint);
+    return data.pets || []
 };
 
 // Fetch a pet
 export const getPet = async (id) => {
     const endpoint = `${url}/api/pet/${id}`;
-    return handleFetch(endpoint);
+    const data = await handleFetch(endpoint);
+    return data.pet || []
 };
 
 // Get breeds
 export const getBreeds = async (type) => {
     const endpoint = `${url}/api/pet/breeds?type=${type}`;
-    return handleFetch(endpoint);
+    const data = await handleFetch(endpoint);
+    return data.breeds || []
+
 };
 
 // Get favorite pets
 export const getFavorites = async (user) => {
     const endpoint = `${url}/api/favorites?user=${user}`;
-    return handleFetch(endpoint);
+    const data = await handleFetch(endpoint);
+    return data.favorites || []
 };
 
 // Add favorite pet

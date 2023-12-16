@@ -1,31 +1,31 @@
-import React from 'react';
-import { useParams, useLocation } from 'react-router-dom';
-import { getPet } from '../utils/api';
-import '../styles/Detail.css';
-import Cat from '../img/Cat.jpg';
-import Dog from '../img/Dog.jpg';
+import React from 'react'
+import { useParams, useLocation } from 'react-router-dom'
+import { getPet } from '../utils/api'
+import '../styles/Detail.css'
+import Cat from '../img/Cat.jpg'
+import Dog from '../img/Dog.jpg'
 
 export default function Detail() {
-  const params = useParams();
-  const location = useLocation();
-  const [results, setResults] = React.useState([]);
-  const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState('');
+  const params = useParams()
+  const location = useLocation()
+  const [results, setResults] = React.useState([])
+  const [loading, setLoading] = React.useState(false)
+  const [error, setError] = React.useState('')
 
   React.useEffect(() => {
     async function loadPopular() {
-      setLoading(true);
+      setLoading(true)
       try {
-        const data = await getPet(params.id);
-        setResults(data);
+        const data = await getPet(params.id)
+        setResults(data)
       } catch (err) {
-        setError('error');
+        setError('error')
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
     }
-    loadPopular();
-  }, [params.id, location.pathname]);
+    loadPopular()
+  }, [params.id, location.pathname])
 
   const photos = results?.photos?.map(pic => {
     return (
@@ -77,7 +77,11 @@ export default function Detail() {
               <h2>Photos</h2>
               <hr />
               <div className="photos">
-                {photos}
+                {photos.length > 0 ? (
+                  <>{photos}</>
+                ) : (
+                  <p>No pics available right now.</p>
+                )}
               </div>
             </div>
             <div className="contact-details">
@@ -97,5 +101,5 @@ export default function Detail() {
         </>
       )}
     </div>
-  );
+  )
 }

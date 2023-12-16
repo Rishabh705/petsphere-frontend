@@ -1,5 +1,5 @@
-import React from 'react';
-import '../styles/Home.css';
+import React from 'react'
+import '../styles/Home.css'
 
 export default function Home() {
   return (
@@ -11,5 +11,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -22,11 +22,12 @@ export default function Pet() {
   React.useEffect(() => {
     async function loadResults() {
       setLoading(true)
+      setError(null)
       try {
         const data = await getPets(page,filterType)
         setResults(data)
         const  data2 = await getFavorites(auth.user);
-        setFav(data2.favorites)
+        setFav(data2)
       } catch (err) {
         setError(err)
       } finally {
@@ -34,8 +35,8 @@ export default function Pet() {
       }
     }
     loadResults()
-  }, [page,filterType,auth.user])
-
+  }, [page,filterType])
+  
   return (
     <div className='srchresults-cont1'>
       <Results results={results} loading={loading} error={error} fav={fav} setFav={setFav}/>

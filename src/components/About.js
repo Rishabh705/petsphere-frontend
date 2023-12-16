@@ -1,5 +1,5 @@
-import React from 'react';
-import '../styles/About.css';
+import React from 'react'
+import '../styles/About.css'
 
 export default function About() {
   return (
@@ -9,7 +9,7 @@ export default function About() {
           <span className="beautify">About Our Pet Adoption Platform</span>
         </h2>
         <p>
-          Welcome to our pet adoption platform! We're not just another website; we're your gateway to a world of adorable pets waiting for a loving home. Whether you're a seasoned pet owner, a first-time adopter, or just curious, our platform has something for everyone. Our user-friendly interface, extensive pet profiles, and personalized recommendations make sure you're always one click away from your next furry friend.
+          Welcome to our pet adoption platform! We're not just another website we're your gateway to a world of adorable pets waiting for a loving home. Whether you're a seasoned pet owner, a first-time adopter, or just curious, our platform has something for everyone. Our user-friendly interface, extensive pet profiles, and personalized recommendations make sure you're always one click away from your next furry friend.
         </p>
         <p>
           Explore a diverse array of pets, from the timeless classics like cats and dogs to unique critters that could be your perfect match. With our platform, you'll embark on a journey to find a companion that suits your lifestyle and preferences.
@@ -56,5 +56,5 @@ export default function About() {
       </p>
       <p>Thank you for choosing our Pet Adoption Platform. Happy adopting!</p>
     </div>
-  );
+  )
 }

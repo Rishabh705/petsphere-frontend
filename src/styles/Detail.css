@@ -75,10 +75,28 @@
 }
 .photos{
     display: flex;
-    flex-direction: row wrap;
-    gap: 10px;
+    overflow-y: scroll;
+    flex-flow: row;
+    gap: 20px;
+}
+.photos::-webkit-scrollbar {
+    width: 2px;
+    height: 5px;
 }
 
+.photos::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 5px;
+}
+
+.photos::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.photos::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 @media screen and (max-width: 575px) {
     .detail-container {
         padding: 6rem 32px 1rem 32px;
@@ -123,7 +141,7 @@
         padding: 6rem 64px 1rem 64px;
     }
     .details{
-        padding: 0rem 4rem;
+        padding: 0rem 0rem;
     }
     .intro{
         padding: 1rem;
@@ -157,7 +175,7 @@
 
 @media screen and (min-width: 768px) {
     .details{
-        padding: 0rem 4rem;
+        padding: 0rem 2rem;
     }
     .intro{
         padding: 1rem;
@@ -182,7 +200,7 @@
         font-size: 1.2rem;
     }
     .photos img{
-        max-width: 30%;
+        max-width: 20%;
         height: auto;
     }
 }
@@ -192,7 +210,7 @@
         padding: 10rem 120px 1rem 120px;
     }
     .details{
-        padding: 0rem 6rem;
+        padding: 0rem 4rem;
     }
     .intro{
         padding: 2rem;

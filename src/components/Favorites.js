@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import '../styles/favorites.css';
-import { getFavorites } from '../utils/api';
-import Results from './Results';
-import PageCount from './PageCount';
+import React, { useState, useEffect } from 'react'
+import '../styles/favorites.css'
+import { getFavorites } from '../utils/api'
+import Results from './Results'
+import PageCount from './PageCount'
 
 export default function Favorites({ user }) {
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [page, setPage] = React.useState(1)
@@ -14,17 +14,17 @@ export default function Favorites({ user }) {
     const fetchFavorites = async () => {
       setLoading(true)
       try {
-        const data = await getFavorites(user);
-        setResults(data.favorites);
+        const data = await getFavorites(user)
+        setResults(data)
       } catch (err) {
         setError(err)
-        console.error('Error fetching favorites:', error);
+        console.error('Error fetching favorites:', error)
       } finally {
         setLoading(false)
       }
     }
-    fetchFavorites();
-  }, [user, error,page]);
+    fetchFavorites()
+  }, [user, error,page])
 
   return (
     <div className="fav-cont">
@@ -32,5 +32,5 @@ export default function Favorites({ user }) {
       <Results results={results} loading={loading} error={error} fav={results} setFav={setResults} />
       <PageCount page= {page} setPage={setPage} count={results.length}/>
     </div>
-  );
+  )
 }
