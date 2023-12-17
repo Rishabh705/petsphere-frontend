@@ -41,10 +41,10 @@ form>div {
 .contact input,
 textarea {
   border: none;
-  color: aliceblue;
+  color: black;
   padding: 5px;
   border-radius: 3px;
-  background-color: rgb(190, 189, 189);
+  background-color: rgb(227, 227, 227);
 }
 
 .contact button {

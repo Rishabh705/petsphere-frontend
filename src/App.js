@@ -27,9 +27,9 @@ function App() {
       <Route element={<AuthRequires />}>
         <Route path="pets" element={<PetsLayout />}>
           <Route index element={<Pet />} />                 {/* All pets list*/}
+          <Route path="favorites" element={<Favorites user={auth.user} />} />
         </Route>
         <Route path="pets/:id" element={<Detail />} />
-        <Route path="favorites" element={<Favorites user={auth.user} />} />
       </Route>
       <Route path="*" element={<Error />} />
     </Route>

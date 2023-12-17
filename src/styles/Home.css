@@ -10,7 +10,11 @@ main {
 }
 
 .container1 {
+    display: flex;
     min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .container2 {
@@ -23,12 +27,43 @@ main {
     justify-content: center;
     align-items: center;
 }
-
+.container3{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 15px;
+}
+.container3 button{
+    border: none;
+    background-color: #f45353;
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 3px;
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+.container3 a{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    width: 100%;
+    height: 100%;
+}
+.container3>button:hover{
+    border-radius: 2rem;
+}
 .background {
     height: 100vh;
+    position: absolute;
+    opacity: 0.5;
     background-image: url('../img/splsh.png');
     background-repeat: no-repeat;
     background-size: cover;
+    top: 0rem;
+    width: 100%;
+    z-index: -1;
 }
 
 .container2 p:nth-child(1) {

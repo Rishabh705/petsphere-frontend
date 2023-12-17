@@ -1,6 +1,6 @@
 .fav-cont {
     min-height: 95vh;
-    padding: 6rem 120px 20px 120px;
+    padding: 1rem;
     color: #36454F;
     display: flex;
     flex-flow: column;
@@ -18,22 +18,4 @@
 }
 .fav-cont li{
     padding-bottom: 0.5rem;
-}
-@media screen and (max-width:575px) {
-    .fav-cont{
-        padding: 6rem 32px 1rem 32px;
-    }
-}
-@media screen and (min-width:576px) {
-    .fav-cont{
-        padding: 6rem 64px 1rem 64px;
-    }
-}
-@media screen and (min-width:768px) {
-    
-}
-@media screen and (min-width:992px) {
-    .fav-cont{
-        padding: 6rem 120px 1rem 120px;
-    }
 }

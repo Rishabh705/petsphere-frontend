@@ -68,7 +68,7 @@ export default function SigninBtn() {
                             </div>
                             <div className='navlist-links'>
                                 <button>
-                                    <Link to='/favorites'><p>Favorites</p></Link>
+                                    <Link to='/pets/favorites'><p>Favorites</p></Link>
                                 </button>
                                 <button onClick={() => handleLogout()}>
                                     <svg

@@ -52,7 +52,7 @@
 .navlist_user_info {
   display: flex;
   padding: 0.5rem;
-  justify-content: space-between;
+  gap: 20px;
 }
 
 .navlist_user_info span img {
@@ -61,6 +61,7 @@
 
 .user_info {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: space-around;
 }
