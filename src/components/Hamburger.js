@@ -20,8 +20,9 @@ export default function Hamburger() {
     function handleDocumentClick(event) {
       const isMenuClicked = menu_bar.contains(event.target) || menu_bg.contains(event.target)
       const isMenuOpen = nav.classList.contains("navbar-nav-show")
-      const isProfileIcnClicked = profileIcon?.contains(event.target) || false
+      const isProfileIcnClicked = profileIcon?.contains(event.target) || true
       const isuserInfoClicked = navlistUser?.contains(event.target) || false
+
 
       if (!isMenuClicked && isMenuOpen  && !isProfileIcnClicked && !isuserInfoClicked) {
         menuOnClick()
