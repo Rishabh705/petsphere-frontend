@@ -5,7 +5,7 @@ const filterSilce = createSlice({
     initialState:{
         type:'clear',
         age:'clear',
-        breed:'clear',
+        breeds:'clear',
         gender:'clear',
     },
     reducers:{

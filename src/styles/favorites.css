@@ -1,12 +1,17 @@
 .fav-cont {
     min-height: 95vh;
     padding: 1rem;
+    justify-content: space-between;
     color: #36454F;
     display: flex;
     flex-flow: column;
     gap: 10px;
 }
-
+.fav-results{
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
 .fav-cont section{
     padding-bottom: 1rem;
 }

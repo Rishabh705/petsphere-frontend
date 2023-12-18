@@ -26,7 +26,7 @@ export default function Pet() {
       try {
         const data = await getPets(page,filterType)
         setResults(data)
-        const  data2 = await getFavorites(auth.user);
+        const  data2 = await getFavorites(auth.user,page,filterType);
         setFav(data2)
       } catch (err) {
         setError(err)
@@ -35,7 +35,7 @@ export default function Pet() {
       }
     }
     loadResults()
-  }, [page,filterType])
+  }, [page,filterType,auth.user])
   
   return (
     <div className='srchresults-cont1'>

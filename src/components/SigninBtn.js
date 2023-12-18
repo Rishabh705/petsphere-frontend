@@ -3,7 +3,7 @@ import img from "../img/img_411076.png"
 import { Link, useNavigate } from 'react-router-dom'
 import '../styles/SigninBtn.css'
 import { useSelector, useDispatch } from 'react-redux'
-import {logout} from '../store/slices/authSlice'
+import { logout } from '../store/slices/authSlice'
 export default function SigninBtn() {
     const [display, setDisplay] = useState(false)
     const dispatch = useDispatch()
@@ -16,19 +16,19 @@ export default function SigninBtn() {
     }
     useEffect(() => {
         const handleOutsideClick = (event) => {
-            const user_info = document.querySelector(".navlist_user_info")
-            const btn = document.querySelector(".profile-btn")
-        
+            const user_info = document.querySelector(".navlist_user_info");
+            const btn = document.querySelector(".profile-btn");
             if (display && user_info && btn && !user_info.contains(event.target) && !btn.contains(event.target)) {
-                setDisplay(false)
+                setDisplay(false);
             }
-        }
-        document.addEventListener('click', handleOutsideClick)
+        };
+
+        document.addEventListener("click", handleOutsideClick);
 
         return () => {
-            document.removeEventListener('click', handleOutsideClick)
-        }
-    }, [display])
+            document.removeEventListener("click", handleOutsideClick);
+        };
+    }, [display]);
 
     function toggleMenu() {
         setDisplay(prev => !prev)

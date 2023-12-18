@@ -18,7 +18,7 @@ export default function Login() {
         loginUser(loginFormData)
             .then(() => {
                 dispatch(login(loginFormData.username))
-                navigate('/pets', {replace:true})
+                navigate(-2)
             })
             .catch(err => setError(err))
             .finally(() => setStatus("idle"))

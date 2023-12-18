@@ -21,14 +21,14 @@ export default function PetsLayout() {
 
     if (ky === 'type' && val !== 'clear') {
       setTypeFilter(val)
-      dispatch(changeFilter({ key: 'breed', value: 'clear' }))
+      dispatch(changeFilter({ key: 'breeds', value: 'clear' }))
       dispatch(changeFilter({ key: 'age', value: 'clear' }))
       dispatch(changeFilter({ key: 'gender', value: 'clear' }))
       setActiveSpecies(true)
     } else if (ky === 'type' && val === 'clear') {
       setTypeFilter('clear')
       dispatch(changeFilter({ key: 'type', value: 'clear' }))
-      dispatch(changeFilter({ key: 'breed', value: 'clear' }))
+      dispatch(changeFilter({ key: 'breeds', value: 'clear' }))
       dispatch(changeFilter({ key: 'age', value: 'clear' }))
       dispatch(changeFilter({ key: 'gender', value: 'clear' }))
       setActiveSpecies(false)
@@ -85,8 +85,8 @@ export default function PetsLayout() {
   const breed = breedTypes.map((btn) => (
     <button
       key={btn}
-      onClick={() => handleFilterChange('breed', btn)}
-      className={buttonClasses('breed', btn)}
+      onClick={() => handleFilterChange('breeds', btn)}
+      className={buttonClasses('breeds', btn)}
     >
       {btn}
     </button>
@@ -142,7 +142,7 @@ export default function PetsLayout() {
                     <h5 className="beautify">Breed</h5>
                     <div className="buttons">
                       {breed}
-                      <button className="filter-btn clear-btn" onClick={() => handleFilterChange('breed', 'clear')}>
+                      <button className="filter-btn clear-btn" onClick={() => handleFilterChange('breeds', 'clear')}>
                         Clear
                       </button>
                     </div>

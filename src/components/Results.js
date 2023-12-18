@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import '../styles/Results.css'
-import { addFavoritePet } from '../utils/api'
+import { manageFavoritePet } from '../utils/api'
 import { useNavigate } from 'react-router-dom'
 import Cat from '../img/Cat.jpg'
 import Dog from '../img/Dog.jpg'
 import { useSelector } from 'react-redux'
 import { FaRegHeart, FaHeart } from 'react-icons/fa'
+import Loading from './Loading'
 
 export default function Results({ results, loading, error, fav, setFav }) {
   const [err, setErr] = useState(null)
@@ -15,26 +16,34 @@ export default function Results({ results, loading, error, fav, setFav }) {
     return state.auth
   })
   if (loading) {
-    return <div>Loading...</div>
+    return <Loading/>
   }
 
   if (error) {
     return <div>Error fetching results. Please try again later.</div>
   }
 
-  const handleFav = (e, id) => {
+  const handleFav = (e, item) => {
     e.stopPropagation()
-    addFavoritePet(auth.user, id)
+
+    //display the user that work is done ;)
+    if(fav.some(favItem => favItem._id === item._id)){
+      setFav(prev => prev.filter(favItem => favItem._id !== item._id));
+    }
+    else{
+      setFav(prev=>[...prev,item])
+    }
+
+    manageFavoritePet(auth.user, item._id)
       .then((data) => {
         setFav(data.favorites)
         setStatus(data.message)
       })
       .catch(er => setErr(er.message))
   }
-
   const cards = results.map((item) => (
     <div className="card2" key={item._id} onClick={() => navigate(`/pets/${item._id}`)}>
-      <span className="fav" onClick={(e) => { handleFav(e, item._id) }}>
+      <span className="fav" onClick={(e) => { handleFav(e, item) }}>
         {fav.some(pet=>pet._id===item._id) ? (
           <FaHeart color='red' size={25} />
         ) : (
