@@ -7,8 +7,6 @@ export default function Hamburger() {
     const nav = document.getElementById("navbar-nav")
     const navlist = document.getElementById("navlist-1")
     const menu_bg = document.getElementById("menu-bg")
-    const profileIcon = document.querySelector(".profile_icon")
-    const navlistUser = document.querySelector(".navlist_user_info")
 
     function menuOnClick() {
       menu_bar.classList.toggle("change")
@@ -18,13 +16,12 @@ export default function Hamburger() {
     }
 
     function handleDocumentClick(event) {
-      const isMenuClicked = menu_bar.contains(event.target) || menu_bg.contains(event.target)
+      const isMenuClicked = menu_bar.contains(event.target) 
+      const isMenuBG = menu_bg.contains(event.target) 
       const isMenuOpen = nav.classList.contains("navbar-nav-show")
-      const isProfileIcnClicked = profileIcon?.contains(event.target) || true
-      const isuserInfoClicked = navlistUser?.contains(event.target) || false
+      const isNavClicked = nav.contains(event.target)
 
-
-      if (!isMenuClicked && isMenuOpen  && !isProfileIcnClicked && !isuserInfoClicked) {
+      if(!isMenuClicked && isMenuOpen && !isMenuBG && !isNavClicked){
         menuOnClick()
       }
     }

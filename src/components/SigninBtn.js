@@ -44,6 +44,7 @@ export default function SigninBtn() {
                     <div className='profile-btn' onClick={toggleMenu}>
                         <div className='profile_icon'>
                             <img
+                                id='profile-icon'
                                 src={img}
                                 alt={auth.user}
                                 width={50}
@@ -88,7 +89,7 @@ export default function SigninBtn() {
                     )}
                 </div>
             ) : (
-                <button className='loginbtn' onClick={() => handleLogin()}>
+                <button className='link loginbtn' onClick={() => handleLogin()}>
                     Sign in
                 </button>
             )}

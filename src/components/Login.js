@@ -4,6 +4,7 @@ import { loginUser } from "../utils/api"
 import '../styles/login.css'
 import { useDispatch } from 'react-redux'
 import { login } from '../store/slices/authSlice'
+import { BiSolidError } from "react-icons/bi"
 
 export default function Login() {
     const [loginFormData, setLoginFormData] = React.useState({ username: "", password: "" })
@@ -35,8 +36,6 @@ export default function Login() {
     return (
         <div className="login-container">
             <h2>Sign in to your account</h2>
-            {error && <h3 className="red">{error.message}</h3>}
-
             <form onSubmit={handleSubmit} className="login-form">
                 <input
                     name="username"
@@ -53,13 +52,19 @@ export default function Login() {
                     value={loginFormData.password}
                 />
                 <button
-                    disabled={status === "submitting"}
+                    disabled={status === "submitting" || !loginFormData.username || !loginFormData.password}
                 >
                     {status === "submitting"
                         ? "Logging in..."
                         : "Log in"
                     }
                 </button>
+                {error && (
+                    <div className='error-cont'>
+                        <BiSolidError className="error-icon" />
+                        <p className="error-message">{error.message}</p>
+                    </div>
+                )}
             </form>
             <Link to='/register'>No account?</Link>
         </div>

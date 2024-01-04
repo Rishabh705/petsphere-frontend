@@ -46,7 +46,27 @@
     color: white;
     font-family: "Inter", sans-serif;
 }
-
+.error-cont{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background-color: rgb(254 202 202);
+    border-radius: 4px;
+}
+.error-icon{
+    height: 1.25rem;
+    width: 1.25rem;
+    color: rgb(239 68 68);
+}
+.error-message{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: rgb(239 68 68);
+}
+button:disabled{
+    opacity: 0.4;
+}
 .red {
     color: #cc0000;
 }

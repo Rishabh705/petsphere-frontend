@@ -2,6 +2,7 @@ import React from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { registerUser } from "../utils/api"
 import '../styles/login.css'
+import { BiSolidError } from "react-icons/bi"
 
 export default function Register() {
   const [loginFormData, setLoginFormData] = React.useState({ username: "", password1: "", password2: "" })
@@ -23,7 +24,7 @@ export default function Register() {
     }
 
     // If passwords match, proceed with registration
-    registerUser({'username':loginFormData.username, 'password':loginFormData.password1})
+    registerUser({ 'username': loginFormData.username, 'password': loginFormData.password1 })
       .then(() => navigate('/login', { replace: true }))
       .catch(err => setError(err))
       .finally(() => setStatus("idle"))
@@ -40,8 +41,6 @@ export default function Register() {
   return (
     <div className="login-container">
       <h2>Register your account</h2>
-      {error && <h3 className="red">{error.message}</h3>}
-
       <form onSubmit={handleSubmit} className="login-form">
         <input
           name="username"
@@ -64,9 +63,15 @@ export default function Register() {
           placeholder="Password again"
           value={loginFormData.password2}
         />
-        <button disabled={status === "submitting"}>
+        <button disabled={status === "submitting" || !loginFormData.username || !loginFormData.password1 || !loginFormData.password2 || loginFormData.password1!==loginFormData.password2}>
           {status === "submitting" ? "Registering..." : "Register"}
         </button>
+        {error && (
+          <div className='error-cont'>
+            <BiSolidError className="error-icon" />
+            <p className="error-message">{error.message}</p>
+          </div>
+        )}
       </form>
       <Link to="/login">Already have an account?</Link>
     </div>
